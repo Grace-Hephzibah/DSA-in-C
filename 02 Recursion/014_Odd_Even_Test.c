@@ -1,40 +1,29 @@
 #include<stdio.h>
 
-void odd(int s, int e)
+void odd(int t)
 {
-  if (e >= s)
-  {
-    if (e%2 == 1)
-    {
-      even(s, e-1);
-      printf("%d ", e);
-    }
+  //printf("I am in odd function - %d \n", t);
 
-    else
-      even(s, e);
-    }
+  if (t == 1)
+    printf("The number is even");
+  else
+    even(t-1);
 }
 
-void even(int s, int e)
+void even(int t)
 {
-  if (e >= s)
-  {
-    if (e%2 == 0)
-    {
-      odd(s, e-1);
-      printf("%d ", e);
-    }
+  //printf("I am in even function - %d \n", t);
 
-    else
-      odd(s, e);
-  }
+  if (t == 1)
+    printf("The number is odd");
+  else
+    odd(t-1);
 }
 
 int main()
 {
-  int start = 1;
-  int end = 10;
+  int test = 6;
+  even(test);
 
-  odd(start, end);
   return 0;
 }
