@@ -22,7 +22,7 @@ void even(int t)
 
 int main()
 {
-  int test = 6;
+  int test = 76;
   even(test);
 
   return 0;

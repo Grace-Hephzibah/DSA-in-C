@@ -2,21 +2,29 @@
 
 #include<stdio.h>
 
-int count_digit(int n, int count)
+int count_digit(int n)
 {
     if (n>0)
-    {
-      return (1 + count_digit(n/10, count+1));
-    }
+      return (1 + count_digit(n/10));
 }
+
+/*
+int count_digit(int n)
+{
+  if (n==0)
+    return ;
+  else
+    return(1+count_digit(n/10));
+}
+*/
 
 int main()
 {
-  int test = 90876;
+  int test = 908761;
 
   // Expected answer : 5
 
-  int ans = count_digit(test, 0);
+  int ans = count_digit(test);
 
   printf("The number of digits of %d is %d.", test, ans);
 
