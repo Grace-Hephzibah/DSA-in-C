@@ -19,7 +19,7 @@ int main()
 
   int ans = GCD(test1,test2);
 
-  printf("The LCM of %d and %d is %d.", test1, test2, ans);
+  printf("The GCD of %d and %d is %d.", test1, test2, ans);
 
   return 0;
 }
